@@ -169,7 +169,7 @@ def delete(card_id):
     db.execute('DELETE FROM cards WHERE id = ?', [card_id])
     db.commit()
     flash('Card deleted.')
-    return redirect(url_for('cards'))
+    return memorize("general", None)
 
 
 @app.route('/general')
